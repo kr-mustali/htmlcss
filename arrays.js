@@ -72,3 +72,48 @@ const points = [40, 100, 1, 5, 25, 10];
 console.log(points);  
 console.log(points.sort(function(a, b){return a - b}));  
 
+console.log("Array Iteration Methods : ");
+//Iterations
+const num = [45, 4, 9, 16, 25];
+
+//using forEach
+let txt = "";
+num.forEach(forFunction);
+console.log("Using forEach : "+txt);
+function forFunction(value) {
+  txt += value + " ";
+}
+
+//using map
+const numbers2 = num.map(mapFunction);
+console.log("Using map function : "+numbers2);
+function mapFunction(value, index, array) {
+  return value;
+}
+
+//using flatMap
+const newFlatArr = num.flatMap((x) => x * 2);
+console.log("Using flatMap function : "+ newFlatArr);
+
+//using filter
+const over18 = num.filter(myFilter);
+console.log("Using filter function  from elements with a value larger than 18 : "+ over18);
+function myFilter(value) {
+  return value > 18;
+} 
+
+//using reduce 
+let sum = num.reduce(myReduce);
+console.log("The Sum is: "+ sum);
+function myReduce(total, value) {
+  return total + value;
+} 
+
+//spread operator
+const q1 = ["Jan", "Feb", "Mar"];
+const q2 = ["Apr", "May", "Jun"];
+const q3 = ["Jul", "Aug", "Sep"];
+const q4 = ["Oct", "Nov", "May"];
+
+const year = [...q1, ...q2, ...q3, ...q4];
+console.log(year);
