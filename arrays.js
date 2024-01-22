@@ -57,4 +57,18 @@ console.log(newArr);
 // console.log(fruits.splice(2, 0, "Lemon", "Kiwi"));
 // console.log(fruits);
 
+const numbers = [4, 9, 16, 25, 29];
+let first = numbers.find(myFunction);
+
+console.log("First number over 18 is " + first);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+console.log(fruits.sort());
+
+const points = [40, 100, 1, 5, 25, 10];
+console.log(points);  
+console.log(points.sort(function(a, b){return a - b}));  
 
