@@ -53,3 +53,8 @@ document.getElementById("demo5").innerHTML =
   x1.toExponential(2) + "<br>" + 
   x1.toExponential(4) + "<br>" + 
   x1.toExponential(6);
+
+  let max = Number.MAX_VALUE;
+document.getElementById("max").innerHTML = max;
+let pv = Number.POSITIVE_INFINITY;
+document.getElementById("pv").innerHTML = pv;
